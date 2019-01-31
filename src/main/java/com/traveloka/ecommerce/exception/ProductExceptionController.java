@@ -1,6 +1,5 @@
-package com.traveloka.ecommerce.controller;
+package com.traveloka.ecommerce.exception;
 
-import com.sun.xml.internal.ws.api.message.Message;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

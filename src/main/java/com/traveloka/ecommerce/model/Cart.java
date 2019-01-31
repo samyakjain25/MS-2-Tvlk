@@ -6,11 +6,21 @@ import org.springframework.data.annotation.Id;
 import java.util.List;
 
 public class Cart {
+
     @Id
     String id;
     List<CartItem> cartItemList = Lists.newArrayList();
     String accountId;
     Double amountPayable = new Double(0);
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public List<CartItem> getCartItemList() {
         return cartItemList;
     }

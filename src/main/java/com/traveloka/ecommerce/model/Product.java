@@ -1,50 +1,53 @@
 package com.traveloka.ecommerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 
-public class
-Product {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Product {
     @Id
-    private String id;
-    private String name;
-    private String description;
+    private String productId;
+    private String productName;
     private Double price;
-    private String image;
-    private String url;
+    private String imageUrl;
+    private Integer quantity;
+    private String brand;
 
     public Product(){
-
     }
-    public Product(String name, String description, Double price, String image, String url) {
-        this.name = name;
-        this.description = description;
+
+    public Product(String productId, String productName, Double price, String imageUrl, Integer quantity, String brand) {
+        this.productId = productId;
+        this.productName = productName;
         this.price = price;
-        this.image = image;
-        this.url = url;
+        this.imageUrl = imageUrl;
+        this.quantity = quantity;
+        this.brand = brand;
     }
 
-    public String getId() {
-        return id;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public String getName() {
-        return name;
+
+    public String getProductId() {
+        return productId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setDescription(String desription) {
-        this.description = desription;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public Double getPrice() {
@@ -55,22 +58,19 @@ Product {
         this.price = price;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
-    public String getUrl() {
-        return url;
+    public Integer getQuantity() {
+        return quantity;
     }
 
-    public void setUrl(String url) {
-        url = url;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
-
-    // all arguments contructor
-
 }
